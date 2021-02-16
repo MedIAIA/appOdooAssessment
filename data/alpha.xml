@@ -1,0 +1,9 @@
+<odoo>
+<!--  Alpha data   -->
+<record id="alpha1" model="det.alpha">
+<field name="name">Alpha1</field>
+<field name="address">Cergy</field>
+<field name="key">8625</field>
+<field name="start_date">2015-01-01</field>
+</record>
+</odoo>
