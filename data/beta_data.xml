@@ -1,0 +1,11 @@
+<odoo>
+    <data noupdate="0">
+        <!-- Alpha data  -->
+        <record id="beta1" model="det.beta">
+            <field name="name">Beta1</field>
+            <field name="phone">0753785200</field>
+            <field name="price">1000</field>
+            <field name="alpha_id" ref="alpha1"/>
+        </record>
+    </data>
+</odoo>
