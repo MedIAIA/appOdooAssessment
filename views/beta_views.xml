@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- tree view -->
+    <record id="det_beta_view_tree" model="ir.ui.view">
+        <field name="name">det.beta.view.tree</field>
+        <field name="model">det.beta</field>
+        <field name="arch" type="xml">
+            <tree string="Betas">
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="price"/>
+                <field name="alpha_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form view -->
+    <record id="det_beta_view_form" model="ir.ui.view">
+        <field name="name">det.beta.view.form</field>
+        <field name="model">det.beta</field>
+        <field name="arch" type="xml">
+            <form string="Add a new element">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="phone"/>
+                        <field name="price"/>
+                        <field name="alpha_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="beta_list_action">
+        <field name="name">betas</field>
+        <field name="res_model">det.beta</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first beta
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="menu_betas"
+              parent="main_menu_det"
+              name="Betas"
+              action="beta_list_action"/>
+
+</odoo>

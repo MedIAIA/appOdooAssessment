@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="determinant.list">
+      <field name="name">determinant list</field>
+      <field name="model">determinant.determinant</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="determinant.action_window">
+      <field name="name">determinant window</field>
+      <field name="res_model">determinant.determinant</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="determinant.action_server">
+      <field name="name">determinant server</field>
+      <field name="model_id" ref="model_determinant_determinant"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="determinant" id="determinant.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="determinant.menu_1" parent="determinant.menu_root"/>
+    <menuitem name="Menu 2" id="determinant.menu_2" parent="determinant.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="determinant.menu_1_list" parent="determinant.menu_1"
+              action="determinant.action_window"/>
+    <menuitem name="Server to list" id="determinant" parent="determinant.menu_2"
+              action="determinant.action_server"/>
+-->
+  </data>
+</odoo>
